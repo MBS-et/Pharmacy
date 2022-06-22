@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81387670-CA29-4527-B60B-44C7556DA6F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pharmacy</RootNamespace>
+    <AssemblyName>Pharmacy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>C:\Users\penea\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>C:\Users\penea\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>C:\Users\penea\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\penea\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>C:\Users\penea\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="SmtpServer, Version=9.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SmtpServer.9.0.1\lib\netstandard2.0\SmtpServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.4.7.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database Connection Classes\getAccess.cs" />
+    <Compile Include="Layer 2 Classes\AddPurchasedOrders.cs" />
+    <Compile Include="Database Connection Classes\AddPurchaseOrdersDB.cs" />
+    <Compile Include="Forms\Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alert.Designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Special Classes\Authentication.cs" />
+    <Compile Include="Special Classes\BackUp.cs" />
+    <Compile Include="Layer 2 Classes\Category.cs" />
+    <Compile Include="Database Connection Classes\CategoryDBconnection.cs" />
+    <Compile Include="Layer 2 Classes\ChangeUserInfo.cs" />
+    <Compile Include="Special Classes\CurvedPnl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Database Connection Classes\DashboardDB.cs" />
+    <Compile Include="Layer 2 Classes\Dispensery.cs" />
+    <Compile Include="Database Connection Classes\DispenseryDB.cs" />
+    <Compile Include="Database Connection Classes\DeleteSotreMedicineDB.cs" />
+    <Compile Include="Database Connection Classes\DeleteViewOrderDB.cs" />
+    <Compile Include="Database Connection Classes\EditStoreDB.cs" />
+    <Compile Include="Database Connection Classes\EmployeeDBConnection.cs" />
+    <Compile Include="Layer 2 Classes\EMPLOYEELAYER2.cs" />
+    <Compile Include="Layer 2 Classes\ForgetLayer2.cs" />
+    <Compile Include="Database Connection Classes\ForgetPasswdDbConnection.cs" />
+    <Compile Include="Forms\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layer 2 Classes\GetCategories.cs" />
+    <Compile Include="Database Connection Classes\GetCategoriesDB.cs" />
+    <Compile Include="Layer 2 Classes\GetDrugId.cs" />
+    <Compile Include="Database Connection Classes\GetSalesReportDB.cs" />
+    <Compile Include="Database Connection Classes\GetStoreDrugsDB.cs" />
+    <Compile Include="Layer 2 Classes\GetSuppliers.cs" />
+    <Compile Include="Database Connection Classes\GetSuppliersDB.cs" />
+    <Compile Include="Layer 2 Classes\GetUserId.cs" />
+    <Compile Include="Layer 2 Classes\GetViewOrder.cs" />
+    <Compile Include="Database Connection Classes\GetViewOrderDB.cs" />
+    <Compile Include="Forms\OrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderList.Designer.cs">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database Connection Classes\PatientDBLayer.cs" />
+    <Compile Include="Layer 2 Classes\Patients2ndLayer.cs" />
+    <Compile Include="Layer 2 Classes\PrintReport.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Layer 2 Classes\Sale.cs" />
+    <Compile Include="Layer 2 Classes\SaveOrders.cs" />
+    <Compile Include="Database Connection Classes\SaveOrdersDB.cs" />
+    <Compile Include="Special Classes\SendEmail.cs" />
+    <Compile Include="Forms\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database Connection Classes\SignUpDBConnection.cs" />
+    <Compile Include="Layer 2 Classes\signupLayer2.cs" />
+    <Compile Include="Layer 2 Classes\Supplier.cs" />
+    <Compile Include="Database Connection Classes\SupplierDBconnection.cs" />
+    <Compile Include="Layer 2 Classes\TodayReport.cs" />
+    <Compile Include="Layer 2 Classes\Users.cs" />
+    <Compile Include="Special Classes\VerificationCode.cs" />
+    <EmbeddedResource Include="Forms\Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderList.resx">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tri1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tri2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tri3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mortar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account-cuate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pharmacist.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pharmacist-bro_1_700x700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First aid kit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pharmacist %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-profile %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_40x40.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Account-amico.png" />
+    <Content Include="Images\Account-cuate.png" />
+    <Content Include="Images\dashboard %281%29.png" />
+    <Content Include="Images\document.png" />
+    <Content Include="Images\First aid kit.gif" />
+    <Content Include="Images\medicine.png" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\minimize.png" />
+    <Content Include="Images\minimize_1_40x40.png" />
+    <Content Include="Images\minimize_30x30.png" />
+    <Content Include="Images\mortar.png" />
+    <Content Include="Images\online-registration.png" />
+    <Content Include="Images\order.png" />
+    <Content Include="Images\Pharmacist %281%29.gif" />
+    <Content Include="Images\Pharmacist-bro_1_700x700.png" />
+    <Content Include="Images\Pharmacist.gif" />
+    <Content Include="Images\printer.jpg" />
+    <Content Include="Images\printer_40x40.png" />
+    <Content Include="Images\registration %281%29.png" />
+    <Content Include="Images\registration.png" />
+    <Content Include="Images\rsz_collapse.png" />
+    <Content Include="Images\rsz_expand.png" />
+    <Content Include="Images\sales.png" />
+    <Content Include="Images\search %281%29.jpg" />
+    <Content Include="Images\search.jpg" />
+    <Content Include="Images\settings.png" />
+    <Content Include="Images\supplier.png" />
+    <Content Include="Images\switch_40x40.png" />
+    <Content Include="Images\tri.png" />
+    <Content Include="Images\tri1.png" />
+    <Content Include="Images\tri2.png" />
+    <Content Include="Images\tri3.png" />
+    <Content Include="Images\user-profile %281%29.png" />
+    <Content Include="Images\user-profile.png" />
+    <Content Include="Resources\Ding.m4a" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\NotificationSound.wav" />
+    <None Include="Resources\collapse_1_1_30x30.png" />
+    <None Include="Resources\expand_1_1_30x30.png" />
+    <None Include="Resources\collapse_1_40x40.png" />
+    <None Include="Resources\expand_1_40x40.png" />
+    <None Include="Resources\rectangle-with-round-corners %281%29.png" />
+    <None Include="Resources\mortar %281%29.png" />
+    <None Include="Resources\edit %281%29.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\profile-user.png" />
+    <None Include="Resources\Pharmacist %282%29.gif" />
+    <None Include="Resources\rectangle-with-round-corners.png" />
+    <None Include="Resources\back-button_30x30.png" />
+    <None Include="Resources\refer_40x401.png" />
+    <None Include="Resources\minimize_35x35.png" />
+    <None Include="Resources\cancel_35x35.png" />
+    <None Include="Resources\refer_40x40.png" />
+    <None Include="Resources\forgot_25x25.png" />
+    <None Include="Resources\danger.png" />
+    <None Include="Resources\circle %282%29.png" />
+    <None Include="Resources\circle %281%29.png" />
+    <None Include="Resources\circle.png" />
+    <None Include="Resources\examination.png" />
+    <None Include="Resources\division.png" />
+    <None Include="Resources\packages.png" />
+    <None Include="Resources\medicine1.png" />
+    <None Include="Resources\logout_25x25.png" />
+    <None Include="Resources\close_25x25.png" />
+    <None Include="Resources\minimize_1_40x40_1_25x25.png" />
+    <None Include="Resources\minimize_1_40x40 %281%29.png" />
+    <None Include="Resources\close-cross_40x40.png" />
+    <None Include="Resources\undo_40x40.png" />
+    <None Include="Resources\magnifying-glass_40x40.png" />
+    <None Include="Resources\minimize_1_40x40.png" />
+    <None Include="Resources\minimize_30x30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
