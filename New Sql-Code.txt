@@ -1,8 +1,0 @@
-ALTER proc [dbo].[getSalesData]
-as
-select d.DrugName as [Drug Name],SUM(so.Quantity) as [Sold Quantity],d.DrugId as Id
-from tbl1_Drug d join tbl3_BoughtDrugOrderItems boi on d.DrugId=boi.DrugId
-join tbl4_BoughtDrugOrder bo on bo.BoughtDrugOrderItemsId=boi.BoughtDrugOrderItemsId
-join tbl5_Dispensary ds on ds.BoughtDrugOrderId=bo.BoughtDrugOrderId
-join tbl6_SoldOrder so on ds.DispensaryId=so.DispensaryId
-group by d.DrugId,d.DrugName
